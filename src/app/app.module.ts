@@ -4,16 +4,23 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UiService } from './services/ui.service';
+import { DetailsComponent } from './pages/details/details.component';
+import { HomeComponent } from './pages/home/home.component';
+import { WeatherService } from './services/weather.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DetailsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [UiService],
+  providers: [UiService, WeatherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

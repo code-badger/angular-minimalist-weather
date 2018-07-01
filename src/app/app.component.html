@@ -32,7 +32,11 @@
 
     </div>
 
-    <h3 class="date__text">Today</h3>
+    <h3 class="date__text">
+        <div ng-app ng-controller="Ctrl">
+            {{date | date:'yyyy-MM-dd'}}
+        </div>
+    </h3>
 
 
     <div class="mode-toggle__container">

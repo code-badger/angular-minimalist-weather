@@ -9,6 +9,7 @@ import { UiService } from './services/ui.service';
 export class AppComponent implements OnInit {
   showMenu = false;
   darkModeActive: boolean;
+  date: Date;
 
   constructor(public ui: UiService) {
 
@@ -18,6 +19,8 @@ export class AppComponent implements OnInit {
     this.ui.darkModeState.subscribe((value) => {
       this.darkModeActive = value;
     });
+
+    this.date = new Date();
   }
 
   toggleMenu() {

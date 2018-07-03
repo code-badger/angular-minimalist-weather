@@ -4,7 +4,8 @@ import { DetailsComponent } from './pages/details/details.component';
 import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
+  // {path: '', component: DetailsComponent, },
+  {path: '', redirectTo: '/details/los%2-angeles', pathMatch: 'full'}
   {path: 'details/:city', component: DetailsComponent}
 ];
 

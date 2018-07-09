@@ -1,6 +1,6 @@
 version: '3'
 services:
-    go-hello:
+    mini-weather:
         build: .
         image: codebadger/mini-weather
         networks:
